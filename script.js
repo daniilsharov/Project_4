@@ -1,5 +1,4 @@
 function playGame(playerMove) {
-    // Generate a random move for the computer
     const randomNumber = Math.random();
     let computerMove = '';
 
@@ -13,20 +12,23 @@ function playGame(playerMove) {
 
     console.log(`Computer's move: ${computerMove}`);
 
-    // Determine the result of the game
     let result = '';
+    const resultParagraph = document.getElementById('result');
+
     if (playerMove === computerMove) {
         result = 'Tie.';
+        resultParagraph.className = 'tie'; 
     } else if (
         (playerMove === 'rock' && computerMove === 'scissors') ||
         (playerMove === 'paper' && computerMove === 'rock') ||
         (playerMove === 'scissors' && computerMove === 'paper')
     ) {
         result = 'You win!';
+        resultParagraph.className = 'win'; 
     } else {
         result = 'You lose.';
+        resultParagraph.className = 'loss';
     }
 
-    // Display the result
-    alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+    resultParagraph.textContent = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`;
 }
