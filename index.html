@@ -12,11 +12,20 @@
         <button onclick="playGame('rock')">Rock</button>
         <button onclick="playGame('paper')">Paper</button>
         <button onclick="playGame('scissors')">Scissors</button>
+        <button class="reset" onclick="resetGame()">Reset the score</button>
     </section>   
+
+
     
     <div class="center-container">
         <p id="result">Pick a Move!</p>
     </div>
+
+    <section class="score">
+        <p id="wins">Wins: 0</p>
+        <p id="losses">Losses: 0</p>
+        <p id="ties">Ties: 0</p>
+    </section>
 
     <script src="script.js"></script>
 </body>

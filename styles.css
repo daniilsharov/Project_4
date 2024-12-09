@@ -13,6 +13,7 @@ h1 {
 .game {
     display: flex;
     justify-content: center;
+    gap: 10px;
 }
 
 .game button {
@@ -22,13 +23,23 @@ h1 {
     font-size: 17px;
 }
 
+
 .game button:hover {
     background-color: #ffbb00;
     cursor: pointer;
     transform: scale(1.2);
 }
 
-.center-container {
+button.reset{
+    background-color: #49d8d1;
+
+}
+
+button.reset:hover {
+    background-color: #4bacc4;
+}
+
+.moveContainer {
     display: flex; 
     justify-content: center; 
 }
@@ -53,5 +64,20 @@ h1 {
 
 .loss {
     color: red;
+}
+
+/*
+    <section class="score">
+        <p id="wins">Wins: 0</p>
+        <p id="losses">Losses: 0</p>
+        <p id="ties">Ties: 0</p>
+    </section>
+*/
+
+.scoreContainer {
+    display: flex; 
+    justify-content: center;
+    gap: 10px;
+    font-size: 24px;
 }
 
